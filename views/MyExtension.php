@@ -1,0 +1,29 @@
+<?php
+$includesArray = array(
+	'title' => 'My Extension',
+	'vue3' => true,
+	'axios027' => true,
+	'bootstrap5' => true,
+	'tabulator5' => true,
+	'fontawesome6' => true,
+	'primevue3' => true,
+	'navigationcomponent' => true,
+	'filtercomponent' => true,
+	'customJSModules' => array('public/extensions/FHC-Core-Developer/js/apps/MyExtension.js'),
+	'customCSSs' => array(
+	    'public/css/components/vue-datepicker.css',
+        'public/css/components/primevue.css',
+		'public/css/components/verticalsplit.css',
+		'public/extensions/FHC-Core-Developer/css/FhcMain.css'
+	)
+);
+
+$this->load->view('templates/FHC-Header', $includesArray);
+?>
+
+<div id="main">
+	<my-extension></my-extension>
+</div>
+
+<?php $this->load->view('templates/FHC-Footer', $includesArray); ?>
+

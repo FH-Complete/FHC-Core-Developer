@@ -1,0 +1,8 @@
+{
+	"name": "FHC-Core-Developer",
+	"description": "Extension for Developers of FH-Complete with Examples",
+	"version": "1",
+	"license": "GPL",
+	"url": "https://github.com/FH-Complete/FHC-Core-Developer",
+	"core_version": "3.4"
+}
