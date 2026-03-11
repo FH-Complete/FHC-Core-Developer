@@ -34,6 +34,11 @@ $config['navigation_menu']['extensions/FHC-Core-Developer/examples/*'] = [
 		'description' => 'FhcApi',
 		'icon' => 'brands fa-vuejs',
 	],
+	'apps' => [
+		'link' => site_url('extensions/FHC-Core-Developer/examples/vuejs/apps'),
+		'description' => 'FhcApps',
+		'icon' => 'brands fa-vuejs',
+	],
 	'phrases' => [
 		'link' => site_url('extensions/FHC-Core-Developer/examples/vuejs/phrases'),
 		'description' => 'Phrases',
