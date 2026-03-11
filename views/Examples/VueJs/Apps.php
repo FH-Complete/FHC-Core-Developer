@@ -32,7 +32,7 @@
 			<aside class="col-lg-3">
 				<div id="sidenav" class="list-group sticky-lg-top">
 					<a href="#load" class="list-group-item list-group-item-action">
-						Load an App
+						Load an App in CodeIgniter View
 					</a>
 					<a href="#load-explained" class="list-group-item list-group-item-action">
 						<span class="ps-3">
@@ -55,28 +55,24 @@
 			<main class="col-lg-9">
 				<h2 class="h3" id="load">Load an App</h2>
 				<p>
-					To make an App extedable you first need to load it with the fhcApps directive in the Codeigniter view.
-					<br>
-					Use the path relative to <code>/public/js/apps</code> without any suffix (.js)
-					<br>
-					For Apps inside Extensions use the Extensions name and a colon as suffix.
+					To make an App extedable you load your app as usual via customJSModules in the Codeigniter view.
 				</p>
 				<pre class="border"><code class="language-php"><?= htmlentities(
 					'<?php' . "\n" .
 					'$includesArray = [' . "\n" .
-					'	\'fhcApps\' => [' . "\n" .
-					'		// Load App (standard way)' . "\n" .
-					'		// location: /public/js/apps/MyApp.js' . "\n" .
-					'		\'MyApp\' => [' . "\n" .
-					'		// Load App from subfolder:' . "\n" .
-					'		// location: /public/js/apps/Subfolder/MyApp.js' . "\n" .
-					'		\'Subfolder/MyApp\' => [' . "\n" .
+					'	\'customJSModules\' => [' . "\n" .
+					'		// Load Core App' . "\n" .
+					'		// location: <FHC_BASE_PATH>/public/js/apps/MyApp.js' . "\n" .
+					'		\'public/js/apps/MyApp.js\',' . "\n" .
+					'		// Load Core App from subfolder:' . "\n" .
+					'		// location: <FHC_BASE_PATH>/public/js/apps/Subfolder/MyApp.js' . "\n" .
+					'		\'public/js/apps/Subfolder/MyApp.js\',' . "\n" .
 					'		// Load App from Extension' . "\n" .
-					'		// location in Extension: /public/js/apps/MyApp.js' . "\n" .
-					'		\'FHC-Core-MyExtension:MyApp\' => [' . "\n" .
+					'		// location: <FHC_BASE_PATH>/public/extensions/FHC-Core-MyExtension/js/apps/MyApp.js' . "\n" .
+					'		\'public/extensions/FHC-Core-MyExtension/js/apps/MyApp.js\',' . "\n" .
 					'		// Load App from Extension and subfolder' . "\n" .
-					'		// location in Extension: /public/js/apps/Subfolder/MyApp.js' . "\n" .
-					'		\'FHC-Core-MyExtension:Subfolder/MyApp\' => [' . "\n" .
+					'		// location: <FHC_BASE_PATH>/public/extensions/FHC-Core-MyExtension/js/apps/Subfolder/MyApp.js' . "\n" .
+					'		\'public/extensions/FHC-Core-MyExtension/js/apps/Subfolder/MyApp.js\',' . "\n" .
 					'	]' . "\n" .
 					'];' . "\n" .
 					'...' . "\n" .
@@ -88,20 +84,27 @@
 				); ?></code></pre>
 				<h3 class="h4" id="load-explained">What happens behind the scenes?</h3>
 				<p>
-					This directive loads in order:
+					Via the ExtendableAppsHelper class from hlp_header_helper.php in the FHC-Header and FHC-Footer the following files are loaded if available:
 				</p>
 				<ul>
-					<li>A CSS file located in <code>/public/css/apps/APP_PATH_AND_NAME.css</code> (if available)</li>
-					<li>All css files located in <code>/public/css/extend_app/APP_PATH_AND_NAME.css</code> (if available) in all Extensions</li>
+					<li>All css files located in <code>FHC_BASE_PATH/public/extensions/FHC-Core-EXTNAME/css/extend_app/APP_PATH_AND_NAME.css</code> (if available) in all Extensions</li>
 					<li>The <code>FhcApps.js library</code> located in the core in <code>/public/js/FhcApps.js</code></li>
-					<li>All js files located in <code>/public/js/extend_app/APP_PATH_AND_NAME.js</code> 
+					<li>All js files located in <code>FHC_BASE_PATH/public/extensions/FHC-Core-EXTNAME/js/extend_app/APP_PATH_AND_NAME.js</code>
 					(if available) in all Extensions as Module</li>
 					<li>The js file located in <code>/public/js/apps/APP_PATH_AND_NAME.js</code></li>
 				</ul>
 
+				<p>For the examples above the green parts are concatenated to APP_PATH_AND_NAME</p>
+				<ul>
+					<li><span class="text-black-50">public/js/apps/</span><span class="text-success">MyApp.js</span></li>
+					<li><span class="text-black-50">public/js/apps/</span><span class="text-success">Subfolder/MyApp.js</span></li>
+					<li><span class="text-black-50">public/</span><span class="text-success">extensions/FHC-Core-MyExtension/</span><span class="text-black-50">js/apps/</span><span class="text-success">MyApp.js</span></li>
+					<li><span class="text-black-50">public/</span><span class="text-success">extensions/FHC-Core-MyExtension/</span><span class="text-black-50">js/apps/</span><span class="text-success">Subfolder/MyApp.js</span></li>
+				</ul>
+
 				<h2 class="h3" id="initiate">Make App extendable</h2>
 				<p>
-					Once the App is load via this directive the <code>FhcApps.js library</code> is available inside the script file.
+					Once the App is loaded the <code>FhcApps.js library</code> is available inside the script file.
 					<br>
 					Use the <code>makeExtendable()</code> functions on the 
 					app object (and the router object if available) to make 
