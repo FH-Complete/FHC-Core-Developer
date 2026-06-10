@@ -15,7 +15,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 import {CoreFilterCmpt} from '../../../../../js/components/filter/Filter.js';
-import {CoreRESTClient} from '../../../../../../public/js/RESTClient.js';
+import {CoreRESTClient} from '../../../../../js/RESTClient.js';
 import MyExtensionForm from './MyExtensionForm.js';
 
 export default {

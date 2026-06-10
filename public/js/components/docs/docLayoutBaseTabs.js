@@ -3,8 +3,8 @@ export default {
 <div class="card card-body bg-light mt-3">
 <code><pre>
 <span class="text-muted">// Import the Core BaseLayout and -Tabs Component</span>
-import CoreBaseLayout from '../../../../../../public/js/components/layout/BaseLayout.js';
-import CoreTabs from '../../../../../../public/js/components/Tabs.js';
+import CoreBaseLayout from '../../../../../js/components/layout/BaseLayout.js';
+import CoreTabs from '../../../../../js/components/Tabs.js';
 
 export const myComponent = {
 	components: { 
