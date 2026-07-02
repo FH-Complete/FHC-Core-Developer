@@ -30,9 +30,33 @@ const app = Vue.createApp({
 	},
 	mounted() {
 		document.body.style.position = 'relative';
-		new bootstrap.ScrollSpy(document.body, {
-			target: '#sidenav'
-		});
+
+		const sidenav = document.getElementById('sidenav');
+		if (sidenav) {
+			if (!sidenav.children.length) {
+				// Populate sidenav
+				document
+					.querySelectorAll('#content > main [id][data-nav-level]')
+					.forEach(el => {
+						const link = document.createElement('a');
+						link.href = '#' + el.id;
+						link.className = 'list-group-item list-group-item-action py-1';
+
+						let name = el.dataset.navTitle || el.innerText;
+						let tier = parseInt(el.dataset.navLevel);
+						while (--tier)
+							name = '<span class="ps-3">' + name + '</span>';
+						link.innerHTML = name;
+
+						sidenav.append(link);
+					});
+			}
+			
+			new bootstrap.ScrollSpy(document.body, {
+				target: '#sidenav'
+			});
+		}
+
 		document.querySelectorAll('[data-bs-toggle="tooltip"]').forEach(el => new bootstrap.Tooltip(el, {
 			title: function() {
 				if (!this.dataset.bsFiles)

@@ -14,6 +14,7 @@ class Examples extends Auth_Controller
 			'tabulatorFilter' => 'admin:rw',
 			'myExtension' => 'admin:rw',
 			'icons' => 'admin:rw',
+			'search' => 'admin:rw',
 			'vuejs' => 'admin:rw',
 			'getExampledata' => 'admin:rw',
 			'getExamplestatusList' => 'admin:rw',
@@ -54,6 +55,15 @@ class Examples extends Auth_Controller
 	public function icons()
 	{
 		$this->load->view('extensions/FHC-Core-Developer/Examples/Icons');
+	}
+
+	/**
+	 * Search
+	 * @return void
+	 */
+	public function search()
+	{
+		$this->load->view('extensions/FHC-Core-Developer/Examples/Search');
 	}
 
 	/**
