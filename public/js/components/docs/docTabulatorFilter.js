@@ -5,10 +5,10 @@ export default {
 <div class="card card-body bg-light mt-3">
 <code><pre>
 <span class="text-muted">// Import the Core Navigation-, BaseLayout- Filter and RestClient Components</span>
-import {CoreNavigationCmpt} from '../../../../../../public/js/components/navigation/Navigation.js';
-import CoreBaseLayout from '../../../../../../public/js/components/layout/BaseLayout.js';
+import {CoreNavigationCmpt} from '../../../../../js/components/navigation/Navigation.js';
+import CoreBaseLayout from '../../../../../js/components/layout/BaseLayout.js';
 import {CoreFilterCmpt} from '../../../../../js/components/filter/Filter.js';
-import {CoreRESTClient} from '../../../../../../public/js/RESTClient.js';
+import {CoreRESTClient} from '../../../../../js/RESTClient.js';
 export default {
 	components: { 
 		CoreNavigationCmpt,

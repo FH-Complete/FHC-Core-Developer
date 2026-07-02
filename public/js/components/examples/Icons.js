@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-import {CoreNavigationCmpt} from '../../../../../../public/js/components/navigation/Navigation.js';
-import CoreBaseLayout from '../../../../../../public/js/components/layout/BaseLayout.js';
+import {CoreNavigationCmpt} from '../../../../../js/components/navigation/Navigation.js';
+import CoreBaseLayout from '../../../../../js/components/layout/BaseLayout.js';
 
 export default {
 	componentName: 'Icons',

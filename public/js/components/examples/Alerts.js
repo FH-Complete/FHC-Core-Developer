@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-import {CoreRESTClient} from '../../../../../../public/js/RESTClient.js';
+import {CoreRESTClient} from '../../../../../js/RESTClient.js';
 import {docAlertEnablePlugin} from "../docs/docAlertEnablePlugin";
 import {docAlertExample} from "../docs/docAlertExample";
 import {docAlertConfirmDelete} from "../docs/docAlertConfirmDelete";

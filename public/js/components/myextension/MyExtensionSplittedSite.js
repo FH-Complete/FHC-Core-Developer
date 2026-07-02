@@ -1,5 +1,5 @@
-import CoreVerticalsplit from '../../../../../../public/js/components/verticalsplit/verticalsplit.js';
-import CoreTabs from '../../../../../../public/js/components/Tabs.js';
+import CoreVerticalsplit from '../../../../../js/components/verticalsplit/verticalsplit.js';
+import CoreTabs from '../../../../../js/components/Tabs.js';
 import MyExtensionContent from "./MyExtensionContent.js";
 
 export default {

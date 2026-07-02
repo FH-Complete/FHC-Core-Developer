@@ -2,7 +2,7 @@ import CoreForm from "../../../../../js/components/Form/Form.js";
 import CoreFormInput from "../../../../../js/components/Form/Input.js";
 import CoreFormValidation from "../../../../../js/components/Form/Validation.js";
 import CoreBsModal from '../../../../../js/components/Bootstrap/Modal.js';
-import {CoreRESTClient} from '../../../../../../public/js/RESTClient.js';
+import {CoreRESTClient} from '../../../../../js/RESTClient.js';
 
 export default {
 	components: {

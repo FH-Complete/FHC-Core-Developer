@@ -14,10 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-import {CoreNavigationCmpt} from '../../../../../../public/js/components/navigation/Navigation.js';
-import CoreBaseLayout from '../../../../../../public/js/components/layout/BaseLayout.js';
+import {CoreNavigationCmpt} from '../../../../../js/components/navigation/Navigation.js';
+import CoreBaseLayout from '../../../../../js/components/layout/BaseLayout.js';
 import {CoreFilterCmpt} from '../../../../../js/components/filter/Filter.js';
-import {CoreRESTClient} from '../../../../../../public/js/RESTClient.js';
+import {CoreRESTClient} from '../../../../../js/RESTClient.js';
 import BsModal from '../../../../../js/components/Bootstrap/Modal.js';
 import docTabulatorFilter from "../docs/docTabulatorFilter.js";
 import docTabulatorFilterDataset from "../docs/docTabulatorFilterDataset.js";

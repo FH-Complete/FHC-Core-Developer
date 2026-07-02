@@ -6,7 +6,7 @@ export default {
 <code><pre>
 <span class="text-muted">// Import the Core Filter- and Core RESTClient Component to build your table and handle data</span>
 import {CoreFilterCmpt} from '../../../../../js/components/filter/Filter.js';
-import {CoreRESTClient} from '../../../../../../public/js/RESTClient.js';
+import {CoreRESTClient} from '../../../../../js/RESTClient.js';
 
 export const TabulatorOnly = {
   components: {
