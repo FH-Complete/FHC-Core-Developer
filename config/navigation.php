@@ -24,6 +24,11 @@ $config['navigation_menu']['extensions/FHC-Core-Developer/examples/*'] = [
 		'description' => 'Tabulator mit Filter',
 		'icon' => 'fa fa-table-columns'
 	],
+	'tabulatorLocalization' => [
+		'link' => site_url('extensions/FHC-Core-Developer/examples/tabulatorLocalization'),
+		'description' => 'Tabulator with localization',
+		'icon' => 'fa fa-table-columns'
+	],
 	'search' => [
 		'link' => site_url('extensions/FHC-Core-Developer/examples/search'),
 		'description' => 'Search',
