@@ -24,6 +24,16 @@ $config['navigation_menu']['extensions/FHC-Core-Developer/examples/*'] = [
 		'description' => 'Tabulator mit Filter',
 		'icon' => 'fa fa-table-columns'
 	],
+	'tabulatorcolumns' => [
+		'link' => site_url('extensions/FHC-Core-Developer/examples/tabulatorcolumns'),
+		'description' => 'TabulatorColumns',
+		'icon' => 'fa fa-table-columns'
+	],
+	'treemenu' => [
+		'link' => site_url('extensions/FHC-Core-Developer/examples/treemenu'),
+		'description' => 'Treemenu',
+		'icon' => 'fa-solid fa-bars-staggered'
+	],
 	'search' => [
 		'link' => site_url('extensions/FHC-Core-Developer/examples/search'),
 		'description' => 'Search',

@@ -12,8 +12,10 @@ class Examples extends Auth_Controller
 			'index' => 'admin:rw',
 			'tabulatorOnly' => 'admin:rw',
 			'tabulatorFilter' => 'admin:rw',
+			'tabulatorcolumns' => 'admin:rw',
 			'myExtension' => 'admin:rw',
 			'icons' => 'admin:rw',
+			'treemenu' => 'admin:rw',
 			'search' => 'admin:rw',
 			'vuejs' => 'admin:rw',
 			'getExampledata' => 'admin:rw',
@@ -47,6 +49,15 @@ class Examples extends Auth_Controller
 		$this->load->view('extensions/FHC-Core-Developer/Examples/TabulatorFilter');
 	}
 
+	/**
+	 * Tabulatorcolumns
+	 * @return void
+	 */
+	public function tabulatorcolumns()
+	{
+		$this->load->view('extensions/FHC-Core-Developer/Examples/Tabulatorcolumns');
+	}
+
 	public function myExtension()
 	{
 		$this->load->view('extensions/FHC-Core-Developer/MyExtension');
@@ -55,6 +66,15 @@ class Examples extends Auth_Controller
 	public function icons()
 	{
 		$this->load->view('extensions/FHC-Core-Developer/Examples/Icons');
+	}
+
+	/**
+	 * Treemenu
+	 * @return void
+	 */
+	public function treemenu()
+	{
+		$this->load->view('extensions/FHC-Core-Developer/Examples/Treemenu');
 	}
 
 	/**
