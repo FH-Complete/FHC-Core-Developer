@@ -17,6 +17,7 @@
 import BaseLayout from '../components/examples/BaseLayout.js';
 import TabulatorOnly from '../components/examples/TabulatorOnly.js';
 import TabulatorFilter from '../components/examples/TabulatorFilter.js';
+import TabulatorLocalization from '../components/examples/TabulatorLocalization.js';
 import Icons from '../components/examples/Icons.js';
 import FhcAlert from '../../../../js/plugin/FhcAlert.js';
 import Phrasen from '../../../../js/plugin/Phrasen.js';
@@ -26,6 +27,7 @@ const app = Vue.createApp({
 		BaseLayout,
 		TabulatorOnly,
 		TabulatorFilter,
+		TabulatorLocalization,
 		Icons
 	}
 })

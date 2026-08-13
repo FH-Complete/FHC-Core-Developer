@@ -13,6 +13,7 @@ class Examples extends Auth_Controller
 			'tabulatorOnly' => 'admin:rw',
 			'tabulatorFilter' => 'admin:rw',
 			'tabulatorcolumns' => 'admin:rw',
+			'tabulatorLocalization' => 'admin:rw',
 			'myExtension' => 'admin:rw',
 			'icons' => 'admin:rw',
 			'treemenu' => 'admin:rw',
@@ -56,6 +57,11 @@ class Examples extends Auth_Controller
 	public function tabulatorcolumns()
 	{
 		$this->load->view('extensions/FHC-Core-Developer/Examples/Tabulatorcolumns');
+	}
+
+	public function tabulatorLocalization()
+	{
+		$this->load->view('extensions/FHC-Core-Developer/Examples/TabulatorLocalization');
 	}
 
 	public function myExtension()
