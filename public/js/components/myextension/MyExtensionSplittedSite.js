@@ -1,5 +1,6 @@
 import CoreVerticalsplit from '../../../../../js/components/verticalsplit/verticalsplit.js';
 import CoreTabs from '../../../../../js/components/Tabs.js';
+import { absoluteJsImportUrl } from '../../../../../js/helpers/UrlHelpers.js';
 import MyExtensionContent from "./MyExtensionContent.js";
 
 export default {
@@ -11,8 +12,8 @@ export default {
 	data: () => {
 		return {
 			tabs : {
-				tab1: { title: 'Tab 1', component: '../../extensions/FHC-Core-Developer/js/components/myextension/MyExtensionWidget.js'},
-				tab2: { title: 'Tab 2', component: '../../extensions/FHC-Core-Developer/js/components/myextension/MyExtensionWidget.js'}
+				tab1: { title: 'Tab 1', component: absoluteJsImportUrl('public/extensions/FHC-Core-Developer/js/components/myextension/MyExtensionWidget.js')},
+				tab2: { title: 'Tab 2', component: absoluteJsImportUrl('public/extensions/FHC-Core-Developer/js/components/myextension/MyExtensionWidget.js')}
 			}
 		}
 	},

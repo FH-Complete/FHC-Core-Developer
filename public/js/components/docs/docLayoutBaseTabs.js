@@ -5,6 +5,7 @@ export default {
 <span class="text-muted">// Import the Core BaseLayout and -Tabs Component</span>
 import CoreBaseLayout from '../../../../../js/components/layout/BaseLayout.js';
 import CoreTabs from '../../../../../js/components/Tabs.js';
+import { absoluteJsImportUrl } from '../../../../../js/helpers/UrlHelpers.js';
 
 export const myComponent = {
 	components: { 
@@ -15,9 +16,10 @@ export const myComponent = {
 	  return {
         <span class="text-muted">// Define your tabs object like this</span>
 	    tabs : {
-          	tab1: { title: 'Tab 1', component: '../mypath/MyComponent1.js' },
-          	tab2: { title: 'Tab 2', component: '../mypath/MyComponent2.js' },
-          	tab3: { title: 'Tab 3', component: '../mypath/MyComponent3.js' }
+			// see helper below; must use absolute paths to not break imports after bundling
+          	tab1: { title: 'Tab 1', component: absoluteJsImportUrl('../mypath/MyComponent1.js') },
+          	tab2: { title: 'Tab 2', component: absoluteJsImportUrl('../mypath/MyComponent2.js') },
+          	tab3: { title: 'Tab 3', component: absoluteJsImportUrl('../mypath/MyComponent3.js') }
 	    }
 	  }
 	},
